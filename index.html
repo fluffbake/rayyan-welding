@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rayyan Welding</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Rayyan Welding</h1>
+    <p>Bengkel Welding di Kedah & Pulau Pinang</p>
+    <a href="#booking" class="btn">Tempah Sekarang</a>
+  </header>
+
+  <section id="services">
+    <h2>Servis & Harga</h2>
+    <ul>
+      <li><strong>Welding Gate</strong> - dari RM300</li>
+      <li><strong>Welding Grill Tingkap</strong> - dari RM150</li>
+      <li><strong>Repair Besi & Frame</strong> - dari RM100</li>
+      <li><strong>Custom Design Welding</strong> - ikut permintaan</li>
+    </ul>
+  </section>
+
+  <section id="gallery">
+    <h2>Galeri Hasil Kerja</h2>
+    <div class="gallery">
+      <img src="images/weld1.jpg" alt="Welding 1" onclick="openModal(this.src)">
+      <img src="images/weld2.jpg" alt="Welding 2" onclick="openModal(this.src)">
+      <img src="images/weld3.jpg" alt="Welding 3" onclick="openModal(this.src)">
+    </div>
+    <div id="modal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg">
+    </div>
+  </section>
+
+  <section id="booking">
+    <h2>Borang Tempahan</h2>
+    <form id="bookingForm">
+      <label for="name">Nama:</label>
+      <input type="text" id="name" required>
+      <label for="service">Jenis Servis:</label>
+      <select id="service" required onchange="updatePrice()">
+        <option value="">-- Pilih Servis --</option>
+        <option value="Welding Gate|300">Welding Gate</option>
+        <option value="Welding Grill Tingkap|150">Welding Grill Tingkap</option>
+        <option value="Repair Frame|100">Repair Frame</option>
+        <option value="Custom Design|0">Custom Design</option>
+      </select>
+      <p id="priceDisplay"></p>
+      <label for="location">Lokasi:</label>
+      <input type="text" id="location" required>
+      <label for="date">Tarikh Diperlukan:</label>
+      <input type="date" id="date" required>
+      <button type="submit" class="btn">Hantar Tempahan via WhatsApp</button>
+    </form>
+  </section>
+
+  <section id="location">
+    <h2>Lokasi & Waktu Operasi</h2>
+    <p><strong>Lokasi:</strong> Kedah & Pulau Pinang</p>
+    <p><strong>Waktu Operasi:</strong> 9.00 pagi - 6.00 petang</p>
+  </section>
+
+  <footer>
+    <p>Hubungi: <a href="tel:+60195684543">+6019-568 4543</a> | <a href="https://wa.me/60195684543">WhatsApp</a></p>
+    <p>&copy; 2025 Rayyan Welding</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
